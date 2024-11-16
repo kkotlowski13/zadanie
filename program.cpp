@@ -2,10 +2,6 @@
 using namespace std;
 
 int silnia(int n) {
-	
-	if ( n < 0 ) {
-		return(EXIT_FAILURE);
-	}
 	if ( n == 0 ) {
 		return 1;
 	}
@@ -17,5 +13,13 @@ int silnia(int n) {
 int main() {
 	int n;
 	cin >> n;
-	cout << silnia(n) << endl; 
+	if ( n < 0 ) {
+		cout << "Liczba jest mniejsza od zero." << endl;
+		return(EXIT_FAILURE);
+	} 
+	else {
+		cout << silnia(n) << endl; 
+	
+	}
+	return 0;
 }
