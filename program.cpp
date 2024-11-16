@@ -1,8 +1,21 @@
 #include<iostream>
 using namespace std;
 
-int main(){
+int silnia(int n) {
+	
+	if ( n < 0 ) {
+		return(EXIT_FAILURE);
+	}
+	if ( n == 0 ) {
+		return 1;
+	}
+	else {
+		return n * silnia(n - 1);
+	}
+}
+
+int main() {
 	int n;
 	cin >> n;
-	cout << n << endl; 
+	cout << silnia(n) << endl; 
 }
